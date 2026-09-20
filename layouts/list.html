@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <section aria-labelledby="section-heading">
+    <h1 id="section-heading">{{ .Title }}</h1>
+    {{ with .Content }}<div class="section-intro">{{ . }}</div>{{ end }}
+    {{ partial "post-list.html" .RegularPages }}
+  </section>
+{{ end }}

@@ -1,0 +1,55 @@
+baseURL = 'https://conjectureguy.github.io/'
+locale = 'en-US'
+title = 'Rahul R Katarki'
+copyright = 'Rahul R Katarki'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Notes on programming, systems, machine learning, and mathematics.'
+
+  [params.author]
+    name = 'Rahul R Katarki'
+    github = 'https://github.com/conjectureguy'
+    codeforces = 'https://codeforces.com/profile/conjectureguy'
+    email = 'mailto:katarki.rahul@gmail.com'
+    linkedin = 'https://www.linkedin.com/in/rahulrkatarki/'
+
+[[menus.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 20
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    noClasses = false
+    style = 'github'
+    tabWidth = 4
+
+[module]
+  [module.hugoVersion]
+    min = '0.146.0'

@@ -1,0 +1,11 @@
+{{- if not .Page.Params.math -}}
+  {{- errorf "Math markup found without math: true in front matter at %s" .Position -}}
+{{- end -}}
+{{- $opts := dict "displayMode" (eq .Type "block") "output" "mathml" -}}
+{{- with try (transform.ToMath .Inner $opts) -}}
+  {{- with .Err -}}
+    {{- errorf "Unable to render math at %s: %s" $.Position . -}}
+  {{- else -}}
+    {{- if eq $.Type "block" }}<div class="math-display">{{ .Value }}</div>{{ else }}<span class="math-inline">{{ .Value }}</span>{{ end -}}
+  {{- end -}}
+{{- end -}}

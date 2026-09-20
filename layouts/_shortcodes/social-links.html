@@ -1,0 +1,6 @@
+<p class="social-links">
+  {{- with site.Params.author.github }}<a href="{{ . }}">GitHub</a>{{ end -}}
+  {{- with site.Params.author.codeforces }} <span aria-hidden="true">·</span> <a href="{{ . }}">Codeforces</a>{{ end -}}
+  {{- with site.Params.author.email }} <span aria-hidden="true">·</span> <a href="{{ . }}">Email</a>{{ end -}}
+  {{- with site.Params.author.linkedin }} <span aria-hidden="true">·</span> <a href="{{ . }}">LinkedIn</a>{{ end -}}
+</p>

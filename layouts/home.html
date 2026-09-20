@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <section aria-labelledby="posts-heading">
+    <h1 id="posts-heading">Posts</h1>
+    {{ partial "post-list.html" (where site.RegularPages "Section" "blogs") }}
+  </section>
+{{ end }}
