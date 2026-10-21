@@ -1,7 +1,6 @@
 baseURL = 'https://conjectureguy.github.io/'
 locale = 'en-US'
-title = 'Rahul R Katarki'
-copyright = 'Rahul R Katarki'
+title = 'cg notes'
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
 
@@ -12,7 +11,6 @@ disableKinds = ['taxonomy', 'term']
     google_analytics_id = 'G-L1RGLG0TL2'
 
   [params.author]
-    name = 'Rahul R Katarki'
     github = 'https://github.com/conjectureguy'
     codeforces = 'https://codeforces.com/profile/conjectureguy'
     email = 'mailto:katarki.rahul@gmail.com'
