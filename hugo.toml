@@ -8,6 +8,9 @@ disableKinds = ['taxonomy', 'term']
 [params]
   description = 'Notes on programming, systems, machine learning, and mathematics.'
 
+  [params.analytics]
+    google_analytics_id = 'G-L1RGLG0TL2'
+
   [params.author]
     name = 'Rahul R Katarki'
     github = 'https://github.com/conjectureguy'
